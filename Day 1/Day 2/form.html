@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" name="name" placeholder="Enter your name here" required/>
+        <br/>
+
+        <label for="email">Email:</label>
+        <input type="email" name="'email" placeholder="Enter email here" required/>
+
+        <br/>
+        <label for="password">Password:</label>
+        <input type="password" name="password" placeholder="Enter password here" required/>
+
+        <br/>
+        <label for="file">File:</label>
+        <input type="file" name="file" required/>
+
+        <br/>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender">Male
+        <input type="radio" name="gender" checked>Femal
+        <input type="radio" name="gender">Others
+
+        <br>
+
+        <label for="message">Message:</label>
+        <textarea name="message" id="message" rows="20" cols="40"></textarea>
+
+        <br/>
+
+        <select name="country" id="country">
+            <option value="nepal">Nepal</option>
+            <option value="china">China</option>
+            <option value="india">India</option>
+        </select>
+
+        <br/>
+        
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="button">Click me</button>
+        </form>    
+</body>
+</html>
