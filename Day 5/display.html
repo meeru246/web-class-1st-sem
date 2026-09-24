@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+       .heading{
+        background-color: red;
+        width: 300px;
+        display: inline;
+        display: inline-block;
+        height: 50px;
+       }
+       a{
+        display: block;
+        display: inline-block;
+        background-color: aqua;
+        width: 100px;
+       }
+       .flex-container{
+        border: 2px solid;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        /* flex-direction: column;
+        flex-direction: row-reverse;
+        flex-direction: column-reverse; */
+
+        justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center;
+        justify-content: space-around;
+        justify-content: space-evenly;
+        justify-content: space-between;
+        justify-content: center;
+
+        align-items: stretch;
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: baseline;
+        align-items: center;
+
+        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
+
+       }
+
+        .flex-item {
+            background-color: skyblue;
+            width: 100px;
+        }
+
+        .flex-item:first-child{
+            font-size: 32px;
+        }
+        
+        .flex-item:nth-child(odd){
+            background-color: steelblue;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="heading">Heading</h1>
+    <div>division</div>
+    <a href="">Anchor</a>
+    <a href="">Anchor</a>
+    <hr/>
+
+    <h1>Flexbox</h1>
+    <div class="flex-container"></div>
+    <div class="flex-item">1</div>
+    <div class="flex-item">2</div>
+    <div class="flex-item">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+</body>
+</html>
