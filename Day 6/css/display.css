@@ -1,0 +1,86 @@
+       body{
+        min-height: 100vh;
+       }
+       .heading{
+        background-color: red;
+        width: 300px;
+        display: inline;
+        display: inline-block;
+        height: 50px;
+       }
+       a{
+        display: block;
+        display: inline-block;
+        background-color: aqua;
+        width: 100px;
+       }
+       .flex-container{
+        border: 2px solid;
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        /* gap: 20px; */
+        /* flex-direction: column;
+        flex-direction: row-reverse;
+        flex-direction: column-reverse; */
+
+        justify-content: flex-start;
+        justify-content: flex-end;
+        justify-content: center;
+        justify-content: space-around;
+        justify-content: space-evenly;
+        justify-content: space-between;
+        justify-content: center;
+
+        align-items: stretch;
+        align-items: flex-start;
+        align-items: flex-end;
+        align-items: baseline;
+        align-items: center;
+
+        flex-wrap: nowrap;
+        /* flex-wrap: wrap;
+        flex-wrap: wrap-reverse; */
+
+       }
+
+        .flex-item {
+            background-color: skyblue;
+            /* width: 100px; */
+            flex-basis: 100px;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex: 1 1 100px;
+
+        }
+
+        .flex-item:first-child{
+            font-size: 32px;
+            flex-grow: 5;
+            flex-shrink: 5;
+            order: 1;
+        }
+        
+        .flex-item:nth-child(2){
+            flex-grow: 3;
+            order: 2;
+        }
+        .flex-item:nth-child(3){
+            flex-grow: 3;
+            order: 5;
+            align-self: stretch;
+        }
+        .flex-item:nth-child(4){
+            flex-grow: 3;
+            order: 5;
+            align-self: flex-start;
+        }
+        .flex-item:last-child{
+            font-size: 32px;
+            flex-grow: 5;
+            flex-shrink: 5;
+            order: 0;
+        }
+        .flex-item:nth-child(even){
+            background-color: steelblue;
+        }

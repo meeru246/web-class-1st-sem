@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+</head>
+<body>
+    <script>
+        // print function/methods
+        document.write("Hello World");
+        document.write("<h1>Hello World</h1>");
+        console.log("Hello World");
+        // alert("Hello");
+        // input function
+        // prompt("Enter Something");
+        // varibles:that holds value, can be reagrded as a container ,location
+        // variable decalration: we use keywords using let and const
+        let a;
+        
+        // variable declaration with initialization
+        let b=5;
+
+        // reassign 
+        b = "some text";
+        console.log(b);
+
+        // data types : string , number , object , undefined ,null ,boolean 
+        // string: we can declare strings with '', "",``
+        let string1="string\n 1";
+        let string2='string 2';
+        let string3=`string 
+                        3, and lets continue`;
+
+        console.log(string1,string2,string3);
+        // with backticks, this is template literal
+        let num =3;
+        console.log(`The number is ${num}, and when you multiply it with 2 is ${num*2}`);
+
+        // camel casing: full name => fullName,full name and last name =>
+        // example:fullNameAndLastName
+        // snake casing => full_name
+        // js best practice is camel casing
+        const firstName = "Miru";
+
+        // we can check type of data using the kryword:typeof
+
+        console.log("Type of firstName:", typeof firstName);
+
+        // number: whole number ,decimals
+        console.log(3);
+        let num2 =6;
+
+        console.log("Num2:" +num2);
+        let num3=7.5;
+        console.log("Num3:",num3);
+        console.log(typeof num3);
+
+        // boolean: true an false
+        const isValid =true;
+        console.log("IsValid:", isValid);
+        console.log(typeof isValid);
+
+        // objects: array and object
+        // array:[],object {}
+        // example
+        const array=[];
+        const object= {};
+
+        console.log(typeof array);
+        console.log(typeof object);
+        console.log(typeof null);
+
+        // null and undefined
+                console.log(typeof undefined);
+
+                //operators: + , - , * , / , ** , % , ++ , --
+                console.log("======operator======");
+                console.log( 4+5);
+                console.log( 4-5);
+                console.log( 4*5);
+                console.log( 10/5);
+                console.log( 3**3);
+                console.log( 10%3);
+
+                let num5 = 0;
+                console.log(num5);
+                num5++;
+                console.log(num5);
+
+                num--;
+                console.log(num5);
+
+                ++num5;
+                console.log(num5);
+
+                --num5;
+                console.log(num5);
+
+                //let keyword , the variables can be re-assigned 
+                //const keyword, the variables cannot be re-assiged
+                //both let and const keyword variables are block scoped
+
+                let letVariable ="let Variable";
+                letVariable="const variable";
+
+                const constVariable ="const variable";
+                //constVariable = 11; 
+                //this is not allowed with variables initialized with const keyword
+
+                console.log("After const reassignment");
+
+                // block scope example
+
+                {
+                    var varVariable = 15;
+                }
+                console.log("Var variable", varVariable);
+
+                {
+                    let blockedScoped = 11;
+
+                }
+                // uncomment this while revising
+                // console.log(blockedScoped);
+
+                // other operators: logical and comparision 
+                // comparision: >, <, >=, <=, ==, !=, ===,!===
+
+                const comparision1 = 3 > 5;
+                console.log(comparision1);
+                console.log(3 > 5);
+                console.log(3 < 5);
+                console.log(3 >= 5);
+                console.log(3 <= 5);
+
+                const num6 =6;
+                const num7 =7;
+                const num10=10;
+                const num11="10";
+
+                console.log(num6 == num7); //false
+                console.log(num6 !== num7); //true
+
+                console.log("equals to and not equals to");
+                console.log(num10 == num11);
+                console.log(num10 === num11);
+                console.log(num10 != num11);
+                console.log(num10 !== num11);
+
+                // let num8;
+                // const variables must ve inicialized
+                // const num9;
+
+                // logical operatoers: ! => not, && => and, || =>or
+
+                console.log("logical operators");
+                console.log(!true);
+                console.log(true && false);
+                console.log(true && false);
+                console.log(true || false);
+                
+
+    </script>
+</body>
+</html>
