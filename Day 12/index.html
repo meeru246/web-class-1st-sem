@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops And objects</title>
+</head>
+<body>
+    <script>
+        //array
+        const arr = [];
+        console.log(arr);
+        console.log(typeof arr);
+
+        //arrays and variables are dynamic
+        const arr1 =[1 , 2,3 ,"string", true];
+        console.log(arr1);
+        
+        console.log(arr[3]);
+        console.log(arr[5]);
+
+        const someValue = arr1[3];
+        console.log(someValue);
+
+        console.log(arr1.length);
+
+        //appending to be array: adding to the end of the array
+        arr1.push(4.5);
+        console.log(arr1);
+
+        arr1.push("This is a sentence");
+        console.log(arr1);
+
+        //removing from the end of an array 
+        arr1.pop();
+        console.log(arr1);
+        const poppedValue=arr1.pop();
+        console.log(poppedValue);
+        console.log(arr1);
+
+        //appending to the front of the array
+        arr1.unshift("unshifted");
+        console.log(arr1);
+
+        //removing from the front of the array
+        arr1.shift();
+        console.log(arr1);
+
+        //example of a join
+        const someString = "This is a sentence";
+        const splittedString = someString.split("");
+        console.log(splittedString);
+        const joinedSplittedString = splittedString;
+        console.log(joinedSplittedString);
+
+        console.log(arr1.slice(2));
+
+        //cheking for value in array
+        console.log(arr1.includes("Hello"));
+        console.log(arr1.includes(3));
+
+        //object
+        const obj ={};
+        console.log(obj);
+        console.log(typeof obj);
+
+        //objects have key value pairs 
+        const obj1={
+            name :"Miru Limbu",
+            age : 21,
+        
+        };
+        console.log(obj1);
+
+        //accessing the value in objects 
+        //barcket notation
+
+        const nameOfObj1 = obj1["name"];
+        console.log(nameOfObj1);
+
+        //dot notation
+        const ageOfObj2 = obj1.age;
+        console.log(ageOfObj2);
+
+        //example of an object 
+        const john = {
+            firstName: "John",
+            lastName: "Doe",
+            age:31,
+            hobbies:["singing","gaming","Drawing"],
+            playGame: function ()
+            {
+                console.log("john is playing game ");
+
+            },
+
+
+        };
+
+        console.log(john["firstName"]);
+        console.log(john.lastName);
+        console.log(john.age);
+        console.log(john["hobbies"][0]);
+        console.log(john.hobbies[1]);
+        john.playGame();
+
+        const jane = {
+            firstName: "Jane",
+            lastName: "Doe",
+            age:31,
+            hobbies:["singing","gaming","Drawing"],
+            // dance:() =>{
+            //     arrow functions do not get this keyword as they do not know who to ReferenceError
+            //     return this;
+            // },
+            dance: function () {
+                return `${this.firstName} is ${this.hobbies[0]}`;
+            },
+        };
+
+        console.log(jane.dance);
+        
+        if (jane.hasDrivingLiscense)
+        {
+            console.log(`${jane.firstName} is eligible to drive`)
+        }
+        else{
+            console.log(`${jane.firstName} is not eligible to drive`)
+
+        }
+
+        //example of array of objects
+        const arr2 =[
+            {name : "name 1", age:5},
+            {name : "name 2", age:12},
+        ];
+
+        obj.name ="Sam";
+        console.log(obj);
+        obj["age"]=15;
+        console.log(obj);
+
+        //spread operator
+        const arr1Spreaded =[...arr1];
+        console.log(arr1Spreaded);
+
+        //spreading and adding new value
+        const arr3 =["Tina, ...arr1"];
+        console.log(arr3);
+        const arr4 = [...arr1,false];
+        console.log(arr4);
+
+        //spreading in object 
+        const obj2 = {...john};
+        console.log(obj2);
+        const obj3 = {...john, firstName:"jack", middleName:"Middlename"};
+        console.log(obj3);
+        console.log(obj2 === john);
+
+        //array inside array
+        // const arr5 = [1,2[3,4,[5,6,[7]]]];
+        // console.log(arr5[2]);
+        // console.log(arr5[2][2][1]);
+
+        //loop
+        // for loop
+        // for(initialization; evaluation; increment/decrement){
+
+        // }
+        for(let i=0; i<10; i++){
+            console.log(i);
+        }
+
+        //while loop
+        //while(evaluation){
+        //}
+
+        let count = 5;
+        while(count != 0){
+            console.log(count);
+            count--;
+        }
+
+        // looping arrays:
+        let sum = 0;
+        const arr6 = [1,2,3,4,5,6,7,8,9];
+        for(let i=0; i< arr6.length; i++){
+            console.log(arr6[i]);
+        }
+
+        for(let i=0; i<arr6.length; i++){
+            sum = sum + arr6[i]; //sum +=arr6[i]
+            console.log(sum);
+        }
+
+        let sum2 = 0;
+        arr6.forEach(function(value,index){
+            console.log(value,index);
+        });
+
+        const arr7 =["1","2","3","4","5","6","7","8","9"];
+
+        arr7.forEach(function(value){
+            sum2 +=value;
+            console.log("sum2:",sum2);
+        });
+
+        //for of loop
+        for (const string of arr7){
+            console.log(string);
+        }
+
+        // filter method
+        const filteredArray = arr6.filter((num)=> {
+            return num % 2 ===0;
+        });
+
+        console.log(filteredArray);
+
+        //map method
+        const mappedArray = arr6.map((val)=> val*4);
+        console.log(mappedArray);
+
+        //reduce method
+        const reducedArray = arr6.reduce(function(value))
+
+    </script>
+</body>
+</html>
